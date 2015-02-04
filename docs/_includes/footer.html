@@ -35,9 +35,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 {% if site.github %}
+  {% if page.layout != "home" %}
   <script src="../dist/js/bootstrap.min.js"></script>
+  {% else %}
+  <script src="dist/js/bootstrap.min.js"></script>
+  {% endif %}
 {% else %}
+  {% if page.layout != "home" %}
   <script src="../dist/js/bootstrap.js"></script>
+  {% else %}
+  <script src="dist/js/bootstrap.js"></script>
+  {% endif %}
 {% endif %}
 
 {% if site.github %}

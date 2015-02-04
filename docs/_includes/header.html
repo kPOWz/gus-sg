@@ -15,9 +15,17 @@
 
 <!-- Bootstrap core CSS -->
 {% if site.github %}
-<link href="../dist/css/bootstrap-custom.min.css" rel="stylesheet">
+  {% if page.layout != "home" %}
+  <link href="../dist/css/bootstrap-custom.min.css" rel="stylesheet">
+  {% else %}
+  <link href="dist/css/bootstrap-custom.min.css" rel="stylesheet">
+  {% endif %}
 {% else %}
-<link href="../dist/css/bootstrap-custom.css" rel="stylesheet">
+  {% if page.layout != "home" %}
+  <link href="../dist/css/bootstrap-custom.css" rel="stylesheet">
+  {% else %}
+  <link href="dist/css/bootstrap-custom.css" rel="stylesheet">
+  {% endif %}
 {% endif %}
 {% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
   <!-- Optional Bootstrap Theme -->
@@ -30,13 +38,26 @@
 
 <!-- Documentation extras -->
 {% if site.github %}
-<link href="../assets/css/docs.min.css" rel="stylesheet">
+  {% if page.layout != "home" %}
+  <link href="../assets/css/docs.min.css" rel="stylesheet">
+  {% else %}
+  <link href="assets/css/docs.min.css" rel="stylesheet">
+  {% endif %}
 {% else %}
-<link href="../assets/css/src/docs.css" rel="stylesheet">
-<link href="../assets/css/src/pygments-manni.css" rel="stylesheet">
+{% if page.layout != "home" %}
+  <link href="../assets/css/src/docs.css" rel="stylesheet">
+  <link href="../assets/css/src/pygments-manni.css" rel="stylesheet">
+  {% else %}
+  <link href="assets/css/src/docs.css" rel="stylesheet">
+  <link href="assets/css/src/pygments-manni.css" rel="stylesheet">
+  {% endif %}
 {% endif %}
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+{% if page.layout != "home" %}
 <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+{% else %}
+<script src="assets/js/ie-emulation-modes-warning.js"></script>
+{% endif %}
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

@@ -12,19 +12,39 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">
         <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
+          {% if page.layout != "home" %}
           <a href="../getting-started/">Getting started</a>
+          {% else %}
+          <a href="getting-started/">Getting started</a>
+          {% endif %}
         </li>
         <li{% if page.slug == "css" %} class="active"{% endif %}>
+          {% if page.layout != "home" %}
           <a href="../css/">CSS</a>
+          {% else %}
+          <a href="css/">CSS</a>
+          {% endif %}
         </li>
         <li{% if page.slug == "components" %} class="active"{% endif %}>
+          {% if page.layout != "home" %}
           <a href="../components/">Components</a>
+          {% else %}
+          <a href="components/">Components</a>
+          {% endif %}
         </li>
         <li{% if page.slug == "js" %} class="active"{% endif %}>
+          {% if page.layout != "home" %}
           <a href="../javascript/">JavaScript</a>
+          {% else %}
+          <a href="javascript/">JavaScript</a>
+          {% endif %}
         </li>
         <li{% if page.slug == "customize" %} class="active"{% endif %}>
+          {% if page.layout != "home" %}
           <a href="../customize/">Customize</a>
+          {% else %}
+          <a href="customize/">Customize</a>
+          {% endif %}
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
